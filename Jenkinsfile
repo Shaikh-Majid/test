@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-               mkdir "c:/mypipline"
+               echo "this is my first pipeline test"
             }
         }
     }
