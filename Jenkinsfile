@@ -3,10 +3,11 @@ pipeline {
     
     environment {
         // Define environment variables if needed
-        DOCKER_IMAGE_NAME = "shaikh888/devopsrepo:alpine"
+        DOCKER_IMAGE_NAME = "shaikh888/devopsrepo"
         Docker_file_path="Dockerfile"
         DOCKER_NAME="democontainer"
         registrycred="DockerHub"
+        DockerImage=""
     }
 
     stages {
@@ -20,8 +21,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry("https://registry.hub.docker.com/", registrycred){
-                     sh "docker push ${DOCKER_IMAGE_NAME}"
-                     }
+                     DockerImage.push("alpine")                   }
             }
           }
     
