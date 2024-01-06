@@ -1,4 +1,4 @@
 FROM ubuntu 
 USER root
-RUN apt-get install nginx -y
+RUN apt install httpd
 
