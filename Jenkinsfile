@@ -1,15 +1,6 @@
 pipeline {
   agent none
-    
-    environment {
-        // Define environment variables if needed
-        DOCKER_IMAGE_NAME = "shaikh888/devopsrepo"
-        Docker_file_path="Dockerfile"
-        DOCKER_NAME="democontainer"
-        registrycred="DockerHub"
-      
-    }
-   stages{
+  stages{
         stage('Build Docker container') {
             agent {
              docker { image 'ubuntu:latest'  }
