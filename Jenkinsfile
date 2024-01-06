@@ -2,8 +2,7 @@ pipeline{
     stages{
         stage ('Build'){
              step{
-            
-           docker build -it Dockerfile
+              docker build -it Dockerfile
         }
         }
        
