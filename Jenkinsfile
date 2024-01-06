@@ -10,12 +10,10 @@ pipeline {
       
     }
 
-    stages {
         stage('Build Docker container') {
             agent {
              docker{ image 'ubuntu:latest'  }
             }
              
             }
-    }
 }
