@@ -6,6 +6,7 @@ pipeline {
         DOCKER_IMAGE_NAME = "shaikh888/devopsrepo:alpine"
         Docker_file_path="Dockerfile"
         DOCKER_NAME="democontainer"
+        registrycred="DockerHub"
     }
 
     stages {
@@ -17,7 +18,7 @@ pipeline {
             }
         stage('Pushing Image') {
             steps {
-            docker.withRegistry("https://hub.docker.com/", ${Dockerhub})
+            docker.withRegistry("https://hub.docker.com/", ${registrycred})
             sh "docker push ${DOCKER_IMAGE_NAME}
 
              
