@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry("https://registry.hub.docker.com", registrycred){
-                      sh "docker pull ${DOCKER_IMAGE_NAME}:httpd"
+                      sh "docker push ${DOCKER_IMAGE_NAME}:alpine"
   }
             }
           }
