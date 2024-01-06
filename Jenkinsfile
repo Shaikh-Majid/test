@@ -1,13 +1,10 @@
 pipeline{
-    agent any{
     stages{
-        stage ('Build'){
-             steps{
-              docker build -it Dockerfile
+        stage('Build'){
+          steps{
+           docker build -it Dockerfile
         }
         }
        
     }
-   }
-
 }
