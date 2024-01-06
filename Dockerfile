@@ -1,4 +1,4 @@
 FROM ubuntu 
 USER root
-RUN httpd install
+RUN apt install httpd -y
 
