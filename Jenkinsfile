@@ -12,15 +12,16 @@ pipeline {
         stage('Build Docker Image') {
             steps {
              sh "docker build -t ${DOCKER_IMAGE_NAME} -f ${Docker_file_path} ."
-
+            }
              
             }
-            stage('Pushing Image') {
+        stage('Pushing Image') {
             steps {
              sh "docker push ${DOCKER_IMAGE_NAME}"
 
              
             }
-        }
+          }
+    
     }
 }
