@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Build Docker container') {
             script {
-             docker{ image ubuntu:latest  }
+             docker{ image 'ubuntu:latest'  }
             }
              
             }
