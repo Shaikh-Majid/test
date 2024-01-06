@@ -7,6 +7,8 @@ pipeline {
         Docker_file_path="Dockerfile"
         DOCKER_NAME="democontainer"
         registrycred="DockerHub"
+        url ="https://registry.hub.docker.com/"
+        
         DockerImage=""
     }
 
@@ -20,8 +22,8 @@ pipeline {
         stage('Pushing Image') {
             steps {
                 script{
-                     docker.withRegistry("https://registry.hub.docker.com/", registrycred){
-                     sh "docker push "https://registry.hub.docker.com/${DOCKER_IMAGE_NAME}"            }
+                     docker.withRegistry(${url}, registrycred){
+                     sh "docker push ${url}/${DOCKER_IMAGE_NAME}"            }
             }
           }
     
