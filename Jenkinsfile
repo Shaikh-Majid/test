@@ -1,10 +1,11 @@
 pipeline{
+    agent any 
     stages{
         stage('Build'){
           steps{
-           docker build -it Dockerfile
+          docker{ image:nginx:latest
         }
         }
-       
-    }
+     }
+}
 }
