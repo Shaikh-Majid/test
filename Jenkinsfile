@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry("https://registry.hub.docker.com/", registrycred){
-                     DockerImage.push("latest")                   }
+                     sh "docker push "https://registry.hub.docker.com/${DOCKER_IMAGE_NAME}"            }
             }
           }
     
