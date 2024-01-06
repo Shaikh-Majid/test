@@ -2,7 +2,7 @@ pipeline {
   agent none
   stages {
         stage('Build Docker container') {
-            agent {
+            script {
               docker { image 'ubuntu:latest'  }
             }
              
