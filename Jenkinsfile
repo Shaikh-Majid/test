@@ -10,10 +10,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                script {
-                    // Build the Docker image
-                    docker.build(env.DOCKER_IMAGE_NAME, "-f ${env.DOCKERFILE_PATH} .")
-                }
+             sh docker build -t Dockerfile
             }
         }
     }
