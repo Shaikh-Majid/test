@@ -17,7 +17,8 @@ pipeline {
             }
         stage('Pushing Image') {
             steps {
-             sh "docker push ${DOCKER_IMAGE_NAME}"
+            docker.withRegistry("https://hub.docker.com/", ${Dockerhub})
+            sh "docker push ${DOCKER_IMAGE_NAME}
 
              
             }
