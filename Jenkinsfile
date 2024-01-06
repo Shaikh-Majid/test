@@ -1,9 +1,9 @@
 pipeline {
   agent none
-  stages{
+  stages {
         stage('Build Docker container') {
             agent {
-             docker { image 'ubuntu:latest'  }
+              docker { image 'ubuntu:latest'  }
             }
              
          }
