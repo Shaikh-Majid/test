@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry("https://registry.hub.docker.com", registrycred){
-                      sh "docker pull $DOCKER_IMAGE_NAME
+                      sh "docker pull ${DOCKER_IMAGE_NAME}
   }
             }
           }
