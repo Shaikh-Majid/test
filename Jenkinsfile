@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-             sh docker build -t Dockerfile
+             docker build -f Dockerfile demonginx
             }
         }
     }
