@@ -1,11 +1,11 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Test') {
-            steps {
-               echo "this is my first pipeline test"
-            }
+pipeline{
+    stages{
+        stage ('Build'){
+             step{
+            
+           docker build -it Dockerfile
         }
+        }
+       
     }
 }
