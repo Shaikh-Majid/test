@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
              //sh "docker build -t ${DOCKER_IMAGE_NAME} -f ${Docker_file_path} ."
-             sh "docker run -dt --name democontainer mynginx:latest"
+             sh "docker stop ${DOCKER_IMAGE_NAME}"
             }
         }
     }
