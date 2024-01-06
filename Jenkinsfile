@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry(${url}, registrycred){
-                     sh "docker push ${url}/${DOCKER_IMAGE_NAME}"            }
+                           }
             }
           }
     
