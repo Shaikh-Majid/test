@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // Define environment variables if needed
-        DOCKER_IMAGE_NAME = "demoimagenginx"
+        DOCKER_IMAGE_NAME = "shaikh888/devopsrepo:alpine"
         Docker_file_path="Dockerfile"
         DOCKER_NAME="democontainer"
     }
@@ -11,8 +11,8 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-             //sh "docker build -t ${DOCKER_IMAGE_NAME} -f ${Docker_file_path} ."
-             sh "docker stop ${DOCKER_NAME}"
+             sh "docker build -t ${DOCKER_IMAGE_NAME} -f ${Docker_file_path} ."
+             
             }
         }
     }
