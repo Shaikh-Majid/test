@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script{
                      docker.withRegistry("https://registry.hub.docker.com/", registrycred){
-                     DockerImage.push("alpine")                   }
+                     DockerImage.push("latest")                   }
             }
           }
     
