@@ -1,3 +1,3 @@
 FROM Ubuntu 
-RUN apt-get install nginx:latest
-CMD["nginx" "-g" "demonoff"]
+RUN apt-get install nginx -y
+
