@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+  agent none
     
     environment {
         // Define environment variables if needed
@@ -12,7 +12,7 @@ pipeline {
    stages{
         stage('Build Docker container') {
             agent {
-             docker{ image 'ubuntu:latest'  }
+             docker { image 'ubuntu:latest'  }
             }
              
          }
