@@ -3,14 +3,14 @@ pipeline {
     
     environment {
         // Define environment variables if needed
-        DOCKER_IMAGE_NAME = "mynginx"
-        DOCKERFILE_PATH = "Dockerfile"
+        DOCKER_IMAGE_NAME = "demoimagenginx"
+    
     }
 
     stages {
         stage('Build Docker Image') {
             steps {
-             docker build -f Dockerfile demonginx
+             sh "docker build -t DOCKER_IMAGE_NAME -f . "
             }
         }
     }
